@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/reset.css'/>
+    <link rel='stylesheet' href='/css/about.css'/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+</head>
+<body>
+<% include partials/header.ejs %>
+
+<div class="about">
+    <div class="inner">
+        <h1>Mandalart 란?</h1>
+        <p>
+            이마이즈미 히로아키가 1987년 창안한 만다라트(Mandalart)<br/>
+            'Manda'는 진수<br/>
+            'la'는 소유<br/>
+            'Art'는 기술, 방법<br/>
+            만다라(曼茶羅)는 깨달음의 경지를 반복하는 불화로 현대 심리학에서도 명상과 치유의 도구로 쓰인다.
+        </p>
+        <img class="mandalart_ex" src="/images/mandalart_example01.jpg"/>
+        <p>
+            만다라트 한 개는 사각형 아홉 개로 구성된다.<br/>
+            가운데 사각형에 당면한 문제를 적는다.<br/>
+            그 문제를 둘러싼 여덟 칸에 세부과제를 적는다.<br/>
+            각 세부과제를 주변부 사각형의 중심에 옮겨 적는다.<br/>
+            각 세부과제를 둘러싼 여덟 칸에 해결책을 적는다.<br/>
+            세부과제 여덟 개에 각각 해결책 여덟 개를 적으면 총 해결책 64개가 도출된다.<br/>
+            해결책 64개를 결합하거나 분해하면서 발상과 실천을 구체화한다.
+        </p>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>
+</body>
+</html>

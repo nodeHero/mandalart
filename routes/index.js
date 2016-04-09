@@ -6,9 +6,4 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mandalart' });
 });
 
-// Mandalart About page.
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Mandalart About' });
-});
-
 module.exports = router;

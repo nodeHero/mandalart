@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title><%= title %></title>
-        <link rel='stylesheet' href='/stylesheets/about.css' />
-    </head>
-    <body class="about">
-        <div class="inner">
-            <h1>Mandalart 란?</h1>
-            <p>
-                이마이즈미 히로아키가 1987년 창안한 만다라트(Mandalart)<br/>
-                'Manda'는 진수<br/>
-                'la'는 소유<br/>
-                'Art'는 기술, 방법<br/>
-                만다라(曼茶羅)는 깨달음의 경지를 반복하는 불화로 현대 심리학에서도 명상과 치유의 도구로 쓰인다.
-            </p>
-            <img class="man-ex" src="/images/mandalart_example01.jpg" />
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/css/reset.css' />
+    <link rel='stylesheet' href='/css/about.css' />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+</head>
+<body>
+<% include partials/header.ejs %>
+
+<div class="about">
+    <div class="inner">
+
+        <h1>About Us</h1>
+        <p>반갑습니다. 저희는 만다라트라는 프로젝트를 만들고 있는 스터디 그룹입니다.</p>
+
+        <div class="member_group clearfix">
+            <div class="member">
+                <img src="/images/pic1.jpg" alt="최병기" />
+                <div>
+                    <p class="name">최병기</p>
+                    <p class="comment">
+                        반갑습니다. 저의 이름은 최병기 입니다.<br/>
+                        즐거운 하루, 보람찬 하루, 행복한 하루
+                    </p>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="/images/pic2.png" alt="박영웅" />
+                <div>
+                    <p class="name">박영웅</p>
+                    <p class="comment">
+                        반갑습니다. 저의 이름은 박영웅 입니다.<br/>
+                        즐거운 하루, 보람찬 하루, 행복한 하루
+                    </p>
+                </div>
+            </div>
         </div>
-    </body>
+
+    </div>
+</div>
+
+<% include partials/footer.ejs %>
+</body>
 </html>

@@ -1,0 +1,68 @@
+// 기본 inner
+.img-block {
+	img {
+		display: block;
+	}
+}
+
+
+// Mandalart_about page
+.about {
+	.img-block;
+	margin-top: 100px;
+
+	.inner {
+		width: 960px;
+		margin: 0 auto;
+
+		h1 {
+			font-size: 70px;
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 40px;
+		}
+		p {
+			text-align: center;
+		}
+
+		.member_group {
+			@member-margin-right: 100px;
+			width: 400px + @member-margin-right;
+			margin: 0 auto;
+
+			.member {
+				margin-top: 80px;
+				margin-right: @member-margin-right;
+				float: left;
+				&:last-child {
+					margin-right: 0;
+				}
+
+				> img {
+					width: 200px;
+					height: 200px;
+					background-color: black;
+					border-radius: 50%;
+					text-indent: -9999px;
+					margin: 30px auto 0 auto;
+				}
+				> div {
+					.name {
+						font-size: 20px;
+						font-weight: bold;
+						margin-top: 20px;
+					}
+					.comment {
+						font-size: 13px;
+						margin-top: 12px;
+					}
+				}
+			}
+		}
+
+		.mandalart_ex {
+			width: 600px;
+			margin: 100px auto;
+		}
+	}
+}
