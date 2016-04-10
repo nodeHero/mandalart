@@ -4,13 +4,13 @@ var router = express.Router();
 // Mandalart About page.
 router.get('/', function(req, res, next) {
      res.render('about', {
-     title: 'About'
+       title: 'About'
      });
 });
 
 router.get('/mandalart', function(req, res, next) {
     res.render('about_mandalart', {
-        title: 'Mandalart About'
+      title: 'Mandalart About'
     });
 });
 

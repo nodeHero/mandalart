@@ -24,6 +24,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
   dest: path.join(__dirname, 'public'),
+  // example,
+  // pathname: /css/about.css
+  // less-middleware find less @ /src/less/css/about.css
+  //   preprocess: /src/less/css/about.css --> /src/less/about.css
   preprocess: {
     path: function(pathname, req) {
       return pathname.replace(path.sep + 'css' + path.sep, path.sep);
