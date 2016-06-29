@@ -1,0 +1,36 @@
+var express = require('express'),
+  config = require('./config/config'),
+  glob = require('glob'),
+  path = require('path'),
+  bodyParser = require('body-parser'),
+  mongoose = require('mongoose'),
+
+  usersRouter = require('./routes/users');
+
+mongoose.connect(config.db);
+var db = mongoose.connection;
+db.on('error', function () {
+  throw new Error('unable to connect to database at ' + config.db);
+});
+
+var models = glob.sync(config.root + '/app/models/*.js');
+models.forEach(function (model) {
+  require(model);
+});
+var app = express();
+
+require('./config/express')(app, config);
+
+app.listen(config.port, function () {
+  console.log('Express server listening on port ' + config.port);
+});
+
+// app.set('port', 3300);
+
+
+//Starting up the server on the port: 3300
+app.listen(app.get('port'), function(){
+  console.log('Server up: http://localhost:' + app.get('port'));
+});
+
+
