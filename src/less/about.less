@@ -5,6 +5,18 @@
 	}
 }
 
+// Noto Sans
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+// 나눔고딕
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+html, body {
+	//font-family: 'Nanum Gothic', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+	background: #E2E4E6;
+}
+
+
+
 
 // Mandalart_about page
 .about {
@@ -66,3 +78,121 @@
 		}
 	}
 }
+
+
+.example {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 100px;
+}
+.example:before {
+	display: inline-block;
+	content: '';
+	width: 10px;
+	height: 30px;
+	background: #E63A74;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+#mandalart {
+	width: 800px;
+	height: 800px;
+	position: relative;
+	margin: 40px auto;
+	background: #E2E4E6;
+	border-radius: 10px;
+
+	// Variables
+	.cellHover {
+		color: white;
+		background: #E63A74;
+	}
+	.cellLight {
+		color: #444;
+		background-color: #dadada;
+		border-bottom: 1px solid #c8c8c8;
+	}
+	.cellDark {
+		color: white;
+		background-color: #afafaf;
+		border-bottom: 1px solid #a2a2a2;
+	}
+
+	> div {
+		width: 780px;
+		height: 780px;
+		position: relative;
+		top: 18px;
+		left: 16px;
+
+		> ul {
+			width: 240px;
+			height: 240px;
+			box-sizing: border-box;
+			position: absolute;
+
+			> li {
+				width: 80px;
+				height: 80px;
+				border-bottom: 1px solid #d1d1d1;
+				position: absolute;
+				box-sizing: border-box;
+				overflow: hidden;
+				background: white;
+				border-radius: 4px;
+				transition: all 0.2s;
+				cursor: pointer;
+				color: #444;
+
+				&.center_color {
+					.cellLight;
+				}
+
+				&:hover {
+					.cellHover;
+				}
+
+				> .text {
+					position: relative;
+					width: 80px;
+					height: 80px;
+					display: table-cell;
+					vertical-align: middle;
+					text-align: center;
+					box-sizing: border-box;
+					padding: 6px;
+					//word-break: keep-all;
+					//word-break: break-all;
+				}
+			}
+
+			&.center_color > li {
+				.cellLight;
+
+				&.center_color {
+					.cellDark;
+				}
+
+				&:hover {
+					.cellHover;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
