@@ -1,8 +1,8 @@
 // 기본 inner
 .img-block {
-	img {
-		display: block;
-	}
+  img {
+    display: block;
+  }
 }
 
 // Noto Sans
@@ -10,176 +10,189 @@
 // 나눔고딕
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 html, body {
-	//font-family: 'Nanum Gothic', sans-serif;
-	font-family: 'Noto Sans KR', sans-serif;
-	background: #E2E4E6;
+  //font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  background: #E2E4E6;
 }
 
-
+.font-size(@currentSize, @ratio) {
+  font-size: (@currentSize / 100) * @ratio;
+}
 
 
 // Mandalart_about page
 .about {
-	.img-block;
-	margin-top: 100px;
+  .img-block;
+  margin-top: 100px;
 
-	.inner {
-		width: 960px;
-		margin: 0 auto;
+  .inner {
+    width: 960px;
+    margin: 0 auto;
 
-		h1 {
-			font-size: 70px;
-			text-align: center;
-			font-weight: bold;
-			margin-bottom: 40px;
-		}
-		p {
-			text-align: center;
-		}
+    h1 {
+      font-size: 70px;
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 40px;
 
-		.member_group {
-			@member-margin-right: 100px;
-			width: 400px + @member-margin-right;
-			margin: 0 auto;
+      span.small {
+        .font-size(70px, 75);
+      }
+    }
+    .summary {
+      padding: 0 146px;
+    }
 
-			.member {
-				margin-top: 80px;
-				margin-right: @member-margin-right;
-				float: left;
-				&:last-child {
-					margin-right: 0;
-				}
+    .member_group {
+      @member-margin-right: 100px;
+      width: 400px + @member-margin-right;
+      margin: 0 auto;
 
-				> img {
-					width: 200px;
-					height: 200px;
-					background-color: black;
-					border-radius: 50%;
-					text-indent: -9999px;
-					margin: 30px auto 0 auto;
-				}
-				> div {
-					.name {
-						font-size: 20px;
-						font-weight: bold;
-						margin-top: 20px;
-					}
-					.comment {
-						font-size: 13px;
-						margin-top: 12px;
-					}
-				}
-			}
-		}
+      .member {
+        margin-top: 80px;
+        margin-right: @member-margin-right;
+        float: left;
+        &:last-child {
+          margin-right: 0;
+        }
 
-		.mandalart_ex {
-			width: 600px;
-			margin: 100px auto;
-		}
-	}
+        > img {
+          width: 200px;
+          height: 200px;
+          background-color: black;
+          border-radius: 50%;
+          text-indent: -9999px;
+          margin: 30px auto 0 auto;
+        }
+        > div {
+          .name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+          }
+          .comment {
+            font-size: 13px;
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+
+    .mandalart_ex {
+      width: 600px;
+      margin: 100px auto;
+    }
+  }
 }
 
 
 .example {
-	font-size: 22px;
-	font-weight: bold;
-	margin-top: 100px;
-}
-.example:before {
-	display: inline-block;
-	content: '';
-	width: 10px;
-	height: 30px;
-	background: #E63A74;
-	vertical-align: middle;
-	margin-right: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+
+  &:before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 30px;
+    background: #E63A74;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  span.small {
+    .font-size(22px, 75);
+    color: lighten(black, 40%);
+  }
 }
 
 #mandalart {
-	width: 800px;
-	height: 800px;
-	position: relative;
-	margin: 40px auto;
-	background: #E2E4E6;
-	border-radius: 10px;
+  width: 800px;
+  height: 800px;
+  position: relative;
+  margin: 20px auto;
+  background: #E2E4E6;
+  border-radius: 10px;
 
-	// Variables
-	.cellHover {
-		color: white;
-		background: #E63A74;
-	}
-	.cellLight {
-		color: #444;
-		background-color: #dadada;
-		border-bottom: 1px solid #c8c8c8;
-	}
-	.cellDark {
-		color: white;
-		background-color: #afafaf;
-		border-bottom: 1px solid #a2a2a2;
-	}
+  // Variables
+  .cellHover {
+    color: white;
+    background: #E63A74;
+  }
+  .cellLight {
+    color: #444;
+    background-color: #dadada;
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .cellDark {
+    color: white;
+    background-color: #afafaf;
+    border-bottom: 1px solid #a2a2a2;
+  }
 
-	> div {
-		width: 780px;
-		height: 780px;
-		position: relative;
-		top: 18px;
-		left: 16px;
+  > div {
+    width: 780px;
+    height: 780px;
+    position: relative;
+    top: 18px;
+    left: 16px;
 
-		> ul {
-			width: 240px;
-			height: 240px;
-			box-sizing: border-box;
-			position: absolute;
+    > ul {
+      width: 240px;
+      height: 240px;
+      box-sizing: border-box;
+      position: absolute;
 
-			> li {
-				width: 80px;
-				height: 80px;
-				border-bottom: 1px solid #d1d1d1;
-				position: absolute;
-				box-sizing: border-box;
-				overflow: hidden;
-				background: white;
-				border-radius: 4px;
-				transition: all 0.2s;
-				cursor: pointer;
-				color: #444;
+      > li {
+        width: 80px;
+        height: 80px;
+        border-bottom: 1px solid #d1d1d1;
+        position: absolute;
+        box-sizing: border-box;
+        overflow: hidden;
+        background: white;
+        border-radius: 4px;
+        transition: all 0.2s;
+        cursor: pointer;
+        color: #444;
 
-				&.center_color {
-					.cellLight;
-				}
+        &.center_color {
+          .cellLight;
+        }
 
-				&:hover {
-					.cellHover;
-				}
+        &:hover {
+          .cellHover;
+        }
 
-				> .text {
-					position: relative;
-					width: 80px;
-					height: 80px;
-					display: table-cell;
-					vertical-align: middle;
-					text-align: center;
-					box-sizing: border-box;
-					padding: 6px;
-					//word-break: keep-all;
-					//word-break: break-all;
-				}
-			}
+        > .text {
+          position: relative;
+          width: 80px;
+          height: 80px;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          box-sizing: border-box;
+          padding: 6px;
+          //word-break: keep-all;
+          //word-break: break-all;
+        }
+      }
 
-			&.center_color > li {
-				.cellLight;
+      &.center_color > li {
+        .cellLight;
 
-				&.center_color {
-					.cellDark;
-				}
+        &.center_color {
+          .cellDark;
+        }
 
-				&:hover {
-					.cellHover;
-				}
-			}
-		}
-	}
+        &:hover {
+          .cellHover;
+        }
+      }
+    }
+  }
 }
 
 

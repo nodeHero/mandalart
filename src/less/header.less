@@ -1,19 +1,44 @@
 .header {
-  @header-height: 80px;
-  height: @header-height;
-  background: black;
+  background: #323548;
 
   .inner {
     width: 960px;
-    height: @header-height;
     margin: 0 auto;
+    position: relative;
+    padding: 20px 0;
 
     .logo {
-      font-size: 30px;
-      line-height: @header-height;
+      font-size: 24px;
+      padding: 10px 0;
 
+      img {
+        width: 30px;
+        height: 30px;
+      }
       a {
         color: white;
+      }
+      span {
+        font-size: 38px;
+        font-weight: bold;
+      }
+    }
+
+    .menu {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -28px;
+
+      > li {
+        float: left;
+        padding: 10px;
+        margin: 10px;
+        font-size: 14px;
+
+        a {
+          color: white;
+        }
       }
     }
   }
