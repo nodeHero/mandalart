@@ -3,9 +3,7 @@ var express = require('express'),
   glob = require('glob'),
   path = require('path'),
   bodyParser = require('body-parser'),
-  mongoose = require('mongoose'),
-
-  usersRouter = require('./routes/users');
+  mongoose = require('mongoose');
 
 mongoose.connect(config.db);
 var db = mongoose.connection;
@@ -24,13 +22,3 @@ require('./config/express')(app, config);
 app.listen(config.port, function () {
   console.log('Express server listening on port ' + config.port);
 });
-
-// app.set('port', 3300);
-
-
-//Starting up the server on the port: 3300
-app.listen(app.get('port'), function(){
-  console.log('Server up: http://localhost:' + app.get('port'));
-});
-
-
