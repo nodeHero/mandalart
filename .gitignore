@@ -61,3 +61,5 @@ node_modules
 
 ## Directory-based project format:
 .idea/
+
+public/components
