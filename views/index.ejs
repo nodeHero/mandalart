@@ -1,11 +1,326 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/reset.css"/>
+  <link rel="stylesheet" href="/css/common.css"/>
+  <link rel="stylesheet" href="/css/header.css"/>
+  <link rel="stylesheet" href="/css/footer.css"/>
+  <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="/js/vendor/jquery-1.10.1.min.js"></script>
+  <script src="/js/jquery.easing.1.3.min.js"></script>
+  <script src="/js/mandalart.js"></script>
+  <script src="/js/main.js"></script>
+</head>
+<body>
+<% include partials/header.ejs %>
+
+<div class="about">
+  <div class="inner">
+    <h1>만다라트<span class="small">(Mandalart)</span> 란?</h1>
+    <p class="summary">
+      이마이즈미 히로아키가 1987년 창안한 만다라트(Mandalart)<br/>
+      'Manda'는 진수 'la'는 소유 'Art'는 기술, 방법<br/>
+      만다라(曼茶羅)는 깨달음의 경지를 반복하는 불화로 현대 심리학에서도 명상과 치유의 도구로 쓰인다.
+    </p>
+
+    <p class="example">오타니 쇼헤이가 하나마키히가시고교 1학년 때 세운 목표 달성표 <span class="small">(Sample)</span></p>
+
+
+    <!--Mandalart START-->
+    <div id="mandalart">
+      <div class="cell">
+        <ul>
+          <li>
+            <div class="text">몸 관리</div>
+          </li>
+          <li>
+            <div class="text">영양제<br/>먹기</div>
+          </li>
+          <li>
+            <div class="text">FSQ 90kg</div>
+          </li>
+          <li>
+            <div class="text">유연성</div>
+          </li>
+          <li>
+            <div class="text">몸 만들기</div>
+          </li>
+          <li>
+            <div class="text">RSQ 130kg</div>
+          </li>
+          <li>
+            <div class="text">스태미너</div>
+          </li>
+          <li>
+            <div class="text">동해물과 백두산이 마르고 닳도록 대한사람 대한으로 길이 보전하세!</div>
+          </li>
+          <li>
+            <div class="text">식사<br/> 저녁 7수저(가득) 아침 3수저</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">인스텝 개선</div>
+          </li>
+          <li>
+            <div class="text">몸통강화</div>
+          </li>
+          <li>
+            <div class="text">축을 흔들리지 않기</div>
+          </li>
+          <li>
+            <div class="text">릴리즈 포인트 안정</div>
+          </li>
+          <li>
+            <div class="text">제구</div>
+          </li>
+          <li>
+            <div class="text">불안정함을 없애기</div>
+          </li>
+          <li>
+            <div class="text">하체강화</div>
+          </li>
+          <li>
+            <div class="text">몸을 열지 않기</div>
+          </li>
+          <li>
+            <div class="text">멘탈 컨트롤 하기</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">각도를 만든다</div>
+          </li>
+          <li>
+            <div class="text">공을 위에서 던진다</div>
+          </li>
+          <li>
+            <div class="text">손목강화</div>
+          </li>
+          <li>
+            <div class="text">힘 모으기</div>
+          </li>
+          <li>
+            <div class="text">구위</div>
+          </li>
+          <li>
+            <div class="text">하체 주도로</div>
+          </li>
+          <li>
+            <div class="text">볼을 앞에서 릴리즈</div>
+          </li>
+          <li>
+            <div class="text">회전 수업</div>
+          </li>
+          <li>
+            <div class="text">가동역</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">뚜렷한 목표 목적을 가진다</div>
+          </li>
+          <li>
+            <div class="text">일희일비하지 않기</div>
+          </li>
+          <li>
+            <div class="text">머리는 차갑게 심장은 뜨겁게</div>
+          </li>
+          <li>
+            <div class="text">핀치에 강하게</div>
+          </li>
+          <li>
+            <div class="text">멘탈</div>
+          </li>
+          <li>
+            <div class="text">분위기에 휩쓸리지 않기</div>
+          </li>
+          <li>
+            <div class="text">마음의 파도를 만들지말기</div>
+          </li>
+          <li>
+            <div class="text">승리에 대한 집념</div>
+          </li>
+          <li>
+            <div class="text">동료를 배려하는 마음</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">몸 만들기</div>
+          </li>
+          <li>
+            <div class="text">제구</div>
+          </li>
+          <li>
+            <div class="text">구위</div>
+          </li>
+          <li>
+            <div class="text">멘탈</div>
+          </li>
+          <li>
+            <div class="text">8구단 드래프트 1순위</div>
+          </li>
+          <li>
+            <div class="text">스피드 160km/h</div>
+          </li>
+          <li>
+            <div class="text">인간성</div>
+          </li>
+          <li>
+            <div class="text">운</div>
+          </li>
+          <li>
+            <div class="text">변화구</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">축을 돌리기</div>
+          </li>
+          <li>
+            <div class="text">하체강화</div>
+          </li>
+          <li>
+            <div class="text">체중증가</div>
+          </li>
+          <li>
+            <div class="text">몸통강화</div>
+          </li>
+          <li>
+            <div class="text">스피드 160km/h</div>
+          </li>
+          <li>
+            <div class="text">어깨주위 강화</div>
+          </li>
+          <li>
+            <div class="text">가동역</div>
+          </li>
+          <li>
+            <div class="text">라이너 캐치볼</div>
+          </li>
+          <li>
+            <div class="text">피칭을 늘리기</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">감성</div>
+          </li>
+          <li>
+            <div class="text">사랑받는 사람</div>
+          </li>
+          <li>
+            <div class="text">계획성</div>
+          </li>
+          <li>
+            <div class="text">배려</div>
+          </li>
+          <li>
+            <div class="text">인강성</div>
+          </li>
+          <li>
+            <div class="text">감사</div>
+          </li>
+          <li>
+            <div class="text">예의</div>
+          </li>
+          <li>
+            <div class="text">신뢰받는 사람</div>
+          </li>
+          <li>
+            <div class="text">지속력</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">인사하기</div>
+          </li>
+          <li>
+            <div class="text">쓰레기 줍기</div>
+          </li>
+          <li>
+            <div class="text">부실 청소</div>
+          </li>
+          <li>
+            <div class="text">물건을 소중히 쓰자</div>
+          </li>
+          <li>
+            <div class="text">운</div>
+          </li>
+          <li>
+            <div class="text">심판분을 대하는 태도</div>
+          </li>
+          <li>
+            <div class="text">플러스 사고</div>
+          </li>
+          <li>
+            <div class="text">응원받는 사람이 되자</div>
+          </li>
+          <li>
+            <div class="text">책 읽기</div>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="text">카운트볼 늘리기</div>
+          </li>
+          <li>
+            <div class="text">포크볼 완성</div>
+          </li>
+          <li>
+            <div class="text">슬라이더의 구위</div>
+          </li>
+          <li>
+            <div class="text">늦게 낮차가 있는 커브</div>
+          </li>
+          <li>
+            <div class="text">변화구</div>
+          </li>
+          <li>
+            <div class="text">좌타자 결정구</div>
+          </li>
+          <li>
+            <div class="text">직구와 같은 폼으로 던지기</div>
+          </li>
+          <li>
+            <div class="text">스트라이크에서 볼을 던지는 제구</div>
+          </li>
+          <li>
+            <div class="text">거리를 이미지한다</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="shadow"></div>
+
+      <div class="text-input">
+        <input class="input" type="text" placeholder="내용을 간략하게 입력하세요." />
+        <div class="btn_group clearfix">
+          <div class="btn cancel">Cancel</div>
+          <div class="btn done">Done</div>
+        </div>
+      </div>
+
+    </div>
+    <!--Mandalart END-->
+
+
+    <p>
+      만다라트 한 개는 사각형 아홉 개로 구성된다.<br/>
+      가운데 사각형에 당면한 문제를 적는다.<br/>
+      그 문제를 둘러싼 여덟 칸에 세부과제를 적는다.<br/>
+      각 세부과제를 주변부 사각형의 중심에 옮겨 적는다.<br/>
+      각 세부과제를 둘러싼 여덟 칸에 해결책을 적는다.<br/>
+      세부과제 여덟 개에 각각 해결책 여덟 개를 적으면 총 해결책 64개가 도출된다.<br/>
+      해결책 64개를 결합하거나 분해하면서 발상과 실천을 구체화한다.
+    </p>
+  </div>
+</div>
+
+
+
+<% include partials/footer.ejs %>
+</body>
 </html>
