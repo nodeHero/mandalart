@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+</head>
+<body>
+<% include partials/header.ejs %>
+
+<div class="about">
+    <div class="inner">
+
+        <h1>About Us</h1>
+        <p>반갑습니다. 저희는 만다라트라는 프로젝트를 만들고 있는 스터디 그룹입니다.</p>
+
+        <div class="member_group clearfix">
+            <div class="member">
+                <img src="/images/face1.jpg" alt="최병기" />
+                <div>
+                    <p class="name">BK-Choi</p>
+                    <p class="comment">
+                        반갑습니다. 저의 이름은 최병기 입니다.<br/>
+                        즐거운 하루, 보람찬 하루, 행복한 하루
+                    </p>
+                </div>
+            </div>
+
+            <div class="member">
+                <img src="/images/face2.jpg" alt="박영웅" />
+                <div>
+                    <p class="name">Herop</p>
+                    <p class="comment">
+                        반갑습니다. 저의 이름은 박영웅 입니다.<br/>
+                        즐거운 하루, 보람찬 하루, 행복한 하루
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<% include partials/footer.ejs %>
+</body>
+</html>

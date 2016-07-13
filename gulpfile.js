@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   less = require('gulp-less');
 
 gulp.task('less', function () {
-  gulp.src('./public/css/*.less')
+  gulp.src('./app/less/*.less')
     .pipe(plumber())
     .pipe(less())
     .pipe(gulp.dest('./public/css'))
@@ -13,7 +13,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./public/css/*.less', ['less']);
+  gulp.watch('./app/less/*.less', ['less']);
 });
 
 gulp.task('develop', function () {

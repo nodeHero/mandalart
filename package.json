@@ -1,6 +1,6 @@
 {
   "name": "mandalart",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple example",
   "private": true,
 
@@ -18,7 +18,7 @@
     "method-override": "^2.3.0",
     "glob": "^6.0.4",
     "mongoose": "^4.4.17",
-    "ejs": "^2.3.1"
+    "ejs": "^2.3.3"
   },
 
   "devDependencies": {

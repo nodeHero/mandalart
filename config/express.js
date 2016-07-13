@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
+var path = require('path');
 
 module.exports = function(app, config) {
   var env = process.env.NODE_ENV || 'development';
