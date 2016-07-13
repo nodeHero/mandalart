@@ -64,3 +64,5 @@ node_modules
 
 ## CSS
 *.css
+
+public/components

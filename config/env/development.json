@@ -1,0 +1,6 @@
+{
+  "db": "mongodb://localhost:27017/mandalart",
+  "app": {
+    "name": "<%= appName %> - <%= appDescription %> - Development"
+  }
+}
