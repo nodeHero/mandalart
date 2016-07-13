@@ -1,8 +1,21 @@
 {
   "name": "mandalart",
+  "title": "만다라트",
+  "description": "만다라트를 작성하고 일지를 만들 수 있는 서비스입니다.",
   "version": "0.0.1",
-  "description": "Simple example",
   "private": true,
+
+  "author": {
+    "name": "NodeHero",
+    "url": "https://github.com/nodeHero"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodeHero/mandalart"
+  },
+  "bugs": {
+    "url": "https://github.com/nodeHero/mandalart/issues"
+  },
 
   "scripts": {
     "start": "node app.js"
@@ -16,18 +29,44 @@
     "body-parser": "^1.13.3",
     "compression": "^1.5.2",
     "method-override": "^2.3.0",
-    "glob": "^6.0.4",
+    "glob": "^7.0.5",
     "mongoose": "^4.4.17",
-    "ejs": "^2.3.3"
+    "ejs": "^2.3.3",
+    "dateformat": "1.0.8"
   },
 
   "devDependencies": {
     "mocha": "~2.5.3",
-    "should": "~8.4.0",
+    "should": "~9.0.2",
     "gulp": "^3.9.0",
     "gulp-less": "^3.0.1",
     "gulp-nodemon": "^2.0.2",
     "gulp-livereload": "^3.8.0",
-    "gulp-plumber": "^1.0.0"
-  }
+    "gulp-plumber": "^1.0.0",
+
+    "del": "2.2.1",
+    "gulp-footer": "1.0.5",
+    "gulp-git": "1.8.0",
+    "gulp-header": "1.8.7",
+    "gulp-module-builder": "1.0.2",
+    "gulp-rename": "1.2.2",
+    "gulp-replace": "0.5.4",
+    "gulp-uglify": "^1.2.0",
+    "run-sequence": "1.2.2"
+  },
+
+  "readmeFilename": "README.md",
+  "contributors": [
+    "BK Choi",
+    "ParkYoungWoong"
+  ],
+  "keywords": [
+    "nodehero",
+    "mandalart",
+    "nodejs",
+    "express",
+    "javascript",
+    "ejs"
+  ]
+
 }

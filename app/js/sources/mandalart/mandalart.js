@@ -1,14 +1,3 @@
-/*!
- * mandalart - 만다라트 v0.0.1 - 2016-07-14 00:59:04
- *
- * Copyright(c) 2016, NodeHero corp, NodeHero <qriosity.bk@gmail.com>
- */
-$(function () {
-
-  var mandalart = new Mandalart('#mandalart');
-
-});
-
 function Mandalart(selector) {
   this.init(selector);
 }
@@ -112,7 +101,6 @@ Mandalart.prototype.closedTextInput = function () {
     that.$textInput.stop(false, true).fadeOut(250);
   });
 };
-
 
 
 
