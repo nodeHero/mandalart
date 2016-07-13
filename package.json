@@ -18,8 +18,7 @@
     "method-override": "^2.3.0",
     "glob": "^6.0.4",
     "mongoose": "^4.4.17",
-    "ejs": "^2.3.3",
-    "less-middleware": "^1.0.4"
+    "ejs": "^2.3.3"
   },
 
   "devDependencies": {

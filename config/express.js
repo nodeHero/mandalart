@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var compress = require('compression');
 var methodOverride = require('method-override');
-var lessMiddleware = require('less-middleware');
 var path = require('path');
 
 module.exports = function(app, config) {
@@ -28,16 +27,6 @@ module.exports = function(app, config) {
   app.use(compress());
   app.use(express.static(config.root + '/public'));
   app.use(methodOverride());
-
-  app.use(lessMiddleware(path.join(__dirname, 'src/less'), {
-    dest: path.join(__dirname, 'public'),
-
-    preprocess: {
-      path: function(pathname, req) {
-        return pathname.replace(path.sep + 'css' + path.sep, path.sep);
-      }
-    }
-  }));
 
   var controllers = glob.sync(config.root + '/app/controllers/*.js');
   controllers.forEach(function (controller) {
