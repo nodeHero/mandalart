@@ -43,7 +43,8 @@ gulp.task('jsmerge', function() {
     .pipe(builder())
     .pipe(header(trailer.header, headerOpt))
     .pipe(footer(trailer.footer))
-    .pipe(gulp.dest(fpath.jsdist));
+    .pipe(gulp.dest(fpath.jsdist))
+    .pipe(livereload());
 });
 
 gulp.task('lessmerge', function() {
@@ -71,29 +72,29 @@ gulp.task('lessmerge', function() {
 gulp.task('less', function () {
   var del = require('del');
 
-  gulp.src('./public/css/*.less')
-    .pipe(plumber())
+  gulp.src(fpath.lessdist + '/*.less')
     .pipe(less())
-    .pipe(gulp.dest('./public/css'))
+    .pipe(gulp.dest(fpath.lessdist))
     .pipe(livereload());
 
   del(fpath.lessdist + '/*.less');
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./app/less/**/*.less', function() {
-    runsync('lessmerge', 'less').pipe(livereload());
+  gulp.watch(fpath.lesssrc + '/**/*.less', function() {
+    runsync('lessmerge', 'less');
   });
   gulp.watch('./app/js/**/*.js', function() {
-    runsync('jsmerge').pipe(livereload());
+    runsync('jsmerge');
   });
 });
 
-gulp.task('livereload', function () {
+gulp.task('develop', function () {
   livereload.listen();
   nodemon({
     script: 'app.js',
-    ext: 'ejs',
+    ext: 'ejs js',
+    ignore: ['app/js/', 'public/js/'],
     stdout: false
   }).on('readable', function () {
     this.stdout.on('data', function (chunk) {
@@ -128,5 +129,5 @@ gulp.task('default', function(done) {
 });
 
 gulp.task('local', function(done) {
-  runsync('clean', 'lessmerge', 'less', 'jsmerge', 'livereload', 'watch', done);
+  runsync('clean', 'lessmerge', 'less', 'jsmerge', 'develop', 'watch', done);
 });
