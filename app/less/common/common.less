@@ -142,11 +142,29 @@ html, body {
     top: 18px;
     left: 16px;
 
+    // CELL 크기 설정
+    @cell_group_size: 260px;
+    @cell_size: 84px;
+
+    // CELL 만들기 함수
+    // .cell_loop(cell크기, 시작index, 끝index, top위치);
+    .cell_loop(@size, @start, @end, @top, @index: 1) when (@start <= @end){
+      &:nth-child(@{start}) {
+        top: @size * (@top - 1);
+        left: @size * (@index - 1);
+      }
+      .cell_loop(@size, @start + 1, @end, @top, @index + 1); // recursion
+    }
+
     > ul {
       width: 240px;
       height: 240px;
       box-sizing: border-box;
       position: absolute;
+
+      .cell_loop(@cell_group_size, 1, 3, 1);
+      .cell_loop(@cell_group_size, 4, 6, 2);
+      .cell_loop(@cell_group_size, 7, 9, 3);
 
       > li {
         width: 80px;
@@ -160,6 +178,10 @@ html, body {
         transition: all 0.25s;
         cursor: pointer;
         color: #444;
+
+        .cell_loop(@cell_size, 1, 3, 1);
+        .cell_loop(@cell_size, 4, 6, 2);
+        .cell_loop(@cell_size, 7, 9, 3);
 
         &.center_color {
           .cellLight;
