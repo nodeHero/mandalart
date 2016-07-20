@@ -1,0 +1,8 @@
+{
+  "common" : [
+    "app/less/common/common.less",
+    "app/less/common/footer.less",
+    "app/less/common/header.less",
+    "app/less/common/reset.less"
+  ]
+}
