@@ -9,10 +9,6 @@ Mandalart.prototype.init = function (selector) {
   this.$textInput = this.$man.find('.text-input');
   this.$textInputCancel = this.$textInput.find('.cancel');
 
-  this.cellGroupSize = 260;
-  this.cellSize = 84;
-
-  this.makeCellGroup();
   this.initEvent();
 };
 
@@ -20,52 +16,6 @@ Mandalart.prototype.initEvent = function () {
   this.textCheck();
   this.openTextInput();
   this.closedTextInput();
-};
-
-
-
-// 큰 단위 CELL 생성
-Mandalart.prototype.makeCellGroup = function () {
-  var that = this;
-
-  that.$man.find('ul').each(function (index) {
-    var $self = $(this);
-
-    that.cellSort($self, index, that.cellGroupSize);
-    that.cellCenter($self, index, 4);
-
-    that.makeCell($self);
-  });
-};
-
-// 작은 단위 CELL 생성
-Mandalart.prototype.makeCell = function ($self) {
-  var that = this;
-
-  $self.find('> li').each(function (index) {
-    var $self = $(this);
-
-    that.cellSort($self, index, that.cellSize);
-    that.cellCenter($self, index, 4);
-  });
-};
-
-// CELL 3x3 단위로 정렬
-Mandalart.prototype.cellSort = function ($self, index, size) {
-  var left = (index % 3) * size
-    , top = parseInt(index / 3) * size;
-
-  $self.css({
-    left: left
-    , top: top
-  });
-};
-
-// 가운데 CELL 색상 등 변경
-Mandalart.prototype.cellCenter = function ($self, index, numberOf) {
-  if (index === numberOf) {
-    $self.addClass('center_color');
-  }
 };
 
 // 입력 정보(text) 체크

@@ -1,0 +1,12 @@
+{
+  "common" : [
+    "app/js/lib/jquery-1.10.1.min.js",
+    "app/js/modernizr-2.8.3.min.js",
+    "app/js/respond.min.js"
+  ],
+
+  "mandalart" : [
+    "app/js/sources/mandalart/main.js",
+    "app/js/sources/mandalart/mandalart.js"
+  ]
+}
