@@ -38,3 +38,19 @@ npm install
 - `uglify` : 합쳐진 js파일을 난독화한다.
 - `default` : `'clean', 'lessmerge', 'less', 'jsmerge', 'uglify'` 순서로 task 실행
 - `local` : `'clean', 'lessmerge', 'less', 'jsmerge', 'livereload', 'watch'` 순서로 task 실행
+
+## MongoDB
+```shell
+shell
+# brew로 설치
+$ brew install mongodb
+
+# mongodb에서 사용할 폴더 생성
+$ mkdir ~/data/mongodb
+
+# mongodb 실행
+$ mongod -dbpath ~/Dev/data/mongodb
+
+# client 실행
+$ mongo
+```
